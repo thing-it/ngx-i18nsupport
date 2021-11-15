@@ -4,7 +4,7 @@
   "description": "Merge XLIFF used by PeerTube",
   "private": false,
   "bin": {
-    "xliffmerge": "bin/xliffmerge.js"
+    "xliffmerge": "dist/bin/xliffmerge.js"
   },
   "engines": {
     "node": ">=10.0"
