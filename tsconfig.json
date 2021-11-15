@@ -1,32 +1,22 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "module": "es2015",
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "outDir": "./dist",
     "lib": [
       "es2017",
       "dom"
     ],
-    "paths": {
-      "@ngx-i18nsupport/ngx-i18nsupport": [
-        "dist/ngx-i18nsupport"
-      ],
-      "@ngx-i18nsupport/tooling": [
-        "dist/tooling"
-      ],
-      "@ngx-i18nsupport/ngx-i18nsupport-lib": [
-        "dist/ngx-i18nsupport-lib"
-      ]
-    }
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "noUnusedParameters": false,
+    "noUnusedLocals": false,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "target": "es5",
+    "esModuleInterop": true
   }
 }

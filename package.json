@@ -1,79 +1,41 @@
 {
-  "name": "ngx-i18nsupport",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "buildall": "cd projects/ngx-i18nsupport-lib && npm run build && cd ../../projects/xliffmerge && npm run build && cd ../../projects/tooling && npm run build && cd ../../projects/tiny-translator && npm run build && cd ../..",
-    "testall": "cd projects/ngx-i18nsupport-lib && npm run test && cd ../../projects/xliffmerge && npm run test && cd ../../projects/tooling && npm run test && cd ../..",
-    "coverall": "cd projects/ngx-i18nsupport-lib && npm run cover && cd ../../projects/xliffmerge && npm run cover && cd ../../projects/tooling && npm run cover && cd ../../projects/tiny-translator && npm run build && cd ../.."
+  "name": "@peertube/xliffmerge",
+  "version": "2.0.0",
+  "description": "Merge XLIFF used by PeerTube",
+  "private": false,
+  "bin": {
+    "xliffmerge": "bin/xliffmerge.js"
   },
-  "private": true,
-  "workspaces": [
-    "projects/xliffmerge",
-    "projects/tooling",
-    "projects/ngx-i18nsupport-lib",
-    "projects/tiny-translator"
+  "engines": {
+    "node": ">=10.0"
+  },
+  "scripts": {
+    "build": "rm -rf dist/ && tsc && cp -r bin/ dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chocobozzz/ngx-i18nsupport.git"
+  },
+  "keywords": [
+    "i18n",
+    "xliff"
   ],
+  "author": "Martin Roob <martinroob65@gmail.com> (www.roobsoft.de)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chocobozzz/ngx-i18nsupport/issues"
+  },
+  "homepage": "https://github.com/Chocobozzz/ngx-i18nsupport#readme",
   "dependencies": {
-    "@angular-devkit/architect": "^0.800.0",
-    "@angular-devkit/core": "~8.0.0",
-    "@angular-devkit/schematics": "~8.0.0",
-    "@angular/animations": "^8.0.0",
-    "@angular/cdk": "^8.0.0",
-    "@angular/common": "^8.0.0",
-    "@angular/compiler": "^8.0.0",
-    "@angular/core": "^8.0.0",
-    "@angular/flex-layout": "^8.0.0-beta.26",
-    "@angular/forms": "^8.0.0",
-    "@angular/material": "^8.0.0",
-    "@angular/platform-browser": "^8.0.0",
-    "@angular/platform-browser-dynamic": "^8.0.0",
-    "@angular/pwa": "^0.13.9",
-    "@angular/router": "~8.0.0",
-    "@angular/service-worker": "~8.0.0",
-    "core-js": "^2.6.2",
-    "hammerjs": "^2.0.8",
-    "rxjs": "6.5.2",
-    "tokenizr": "1.4.0",
-    "tsickle": "0.35.0",
-    "zone.js": "~0.9.1"
+    "chalk": "^2.4.1",
+    "he": "^1.2.0",
+    "request": "^2.88.2",
+    "rxjs": "^7.4.0",
+    "tokenizr": "^1.6.4",
+    "xmldom": "^0.6.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.800.0",
-    "@angular-devkit/build-ng-packagr": "~0.800.0",
-    "@angular/cli": "~8.0.0",
-    "@angular/compiler-cli": "~8.0.0",
-    "@angular/language-service": "~8.0.0",
-    "@types/jasmine": "~3.3.5",
-    "@types/jasminewd2": "~2.0.6",
-    "@types/node": "~10.12.18",
-    "@types/request": "^2.48.1",
-    "codelyzer": "~5.0.1",
-    "coveralls": "^3.0.0",
-    "cpx": "^1.5.0",
-    "cross-env": "^5.1.1",
-    "istanbul": "^0.4.5",
-    "jasmine-core": "~3.3.0",
-    "jasmine-node": "^1.14.5",
-    "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~3.1.4",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "~2.0.1",
-    "karma-jasmine": "~2.0.1",
-    "karma-jasmine-html-reporter": "^1.4.0",
-    "lcov-result-merger": "^3.1.0",
-    "move-cli": "^1.2.0",
-    "ng-packagr": "^5.2.0",
-    "protractor": "~5.4.2",
-    "replace": "^1.0.1",
-    "ts-node": "~7.0.0",
-    "tslib": "^1.9.0",
-    "tslint": "~5.16.0",
-    "typescript": "~3.4.5"
+    "@types/node": "^16.11.7",
+    "@types/tokenizr": "^1.6.1"
   }
 }
