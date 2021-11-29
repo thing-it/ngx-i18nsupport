@@ -432,14 +432,18 @@ export class XliffMerge {
 
         // remove all elements that are no longer used
         let removeCount = 0;
+        const alreadyProcessed = new Set<string>()
         languageSpecificMessagesFile.forEachTransUnit((transUnit: ITransUnit) => {
             const existsInMaster = !isNullOrUndefined(this.master.transUnitWithId(transUnit.id));
-            if (!existsInMaster) {
+
+            if (alreadyProcessed.has(transUnit.id) || !existsInMaster) {
                 if (this.parameters.removeUnusedIds()) {
                     languageSpecificMessagesFile.removeTransUnitWithId(transUnit.id);
                 }
                 removeCount++;
             }
+
+            alreadyProcessed.add(transUnit.id)
         });
         if (removeCount > 0) {
             if (this.parameters.removeUnusedIds()) {
