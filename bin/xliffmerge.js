@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require('../xliffmerge/main.js');
+require("../xliffmerge/main.js");

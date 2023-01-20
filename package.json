@@ -1,7 +1,6 @@
 {
-  "name": "@peertube/xliffmerge",
+  "name": "@thing-it/xliffmerge",
   "version": "2.0.3",
-  "description": "Merge XLIFF used by PeerTube",
   "private": false,
   "bin": {
     "xliffmerge": "dist/bin/xliffmerge.js"
@@ -10,7 +9,8 @@
     "node": ">=10.0"
   },
   "scripts": {
-    "build": "rm -rf dist/ && tsc && cp -r bin/ dist/"
+    "build": "rm -rf dist/ && tsc && cp -r bin dist/",
+    "package": "npm run build && npm pack"
   },
   "repository": {
     "type": "git",
