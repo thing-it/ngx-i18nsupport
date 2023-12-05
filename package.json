@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "rm -rf dist/ && tsc && cp -r bin dist/",
-    "package": "npm run build && npm pack"
+    "package": "npm run build && npm pack && mv *.tgz dist/"
   },
   "repository": {
     "type": "git",
@@ -20,12 +20,9 @@
     "i18n",
     "xliff"
   ],
-  "author": "Martin Roob <martinroob65@gmail.com> (www.roobsoft.de)",
+  "author": "Martin Roob <martinroob65@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Chocobozzz/ngx-i18nsupport/issues"
-  },
-  "homepage": "https://github.com/Chocobozzz/ngx-i18nsupport#readme",
+  "homepage": "https://github.com/thing-it/xliffmerge#readme",
   "dependencies": {
     "@xmldom/xmldom": "^0.8.10",
     "chalk": "^2.4.1",
