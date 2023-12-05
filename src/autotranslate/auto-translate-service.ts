@@ -1,5 +1,5 @@
 import {format} from 'util';
-import * as request from 'request';
+import * as request from '@cypress/request';
 import {Observable} from 'rxjs';
 import {of, forkJoin, throwError} from 'rxjs';
 import {map} from 'rxjs/operators';
